@@ -4,7 +4,7 @@ import com.tfg.tfg_training_marta.modelos.Entrenamiento;
 
 import java.util.List;
 
-public class DAOFirebaseEntrenamiento extends  IDAOEntrenamiento{
+public class DAOMemoryEntrenamiento extends IDAOEntrenamiento {
     @Override
     public Entrenamiento getById(String id) {
         return null;

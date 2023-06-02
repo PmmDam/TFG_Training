@@ -4,7 +4,7 @@ import com.tfg.tfg_training_marta.modelos.Usuario;
 
 import java.util.List;
 
-public class DAOFirebaseUsuario extends IDAOUsuario{
+public class DAOMemoryUsuario extends IDAOUsuario{
     @Override
     public Usuario getById(String id) {
         return null;
