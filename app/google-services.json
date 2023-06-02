@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "593470709570",
+    "project_id": "trainingapp-7bc8c",
+    "storage_bucket": "trainingapp-7bc8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593470709570:android:b1179c3f9c139dbf7d72db",
+        "android_client_info": {
+          "package_name": "com.example.trainingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593470709570-t4hqvh6522h61tqbn0mh11ee04h2rr43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe6aFRpMueLFdgba4pjQ4Vrgmpv5HxGWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593470709570-t4hqvh6522h61tqbn0mh11ee04h2rr43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593470709570:android:87856c5bba5d64687d72db",
+        "android_client_info": {
+          "package_name": "com.tfg.tfg_training_marta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593470709570-t4hqvh6522h61tqbn0mh11ee04h2rr43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe6aFRpMueLFdgba4pjQ4Vrgmpv5HxGWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593470709570-t4hqvh6522h61tqbn0mh11ee04h2rr43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
