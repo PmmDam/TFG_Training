@@ -17,12 +17,24 @@ import java.util.List;
 //Esta clase provee el contexto en memoria simulando una sesion con la base de datos.
 public class DataMemory {
 
+    //Patrón Singleton
+    private static DataMemory instance;
+
+    public static DataMemory getInstance(){
+        if(instance == null){
+            instance = new DataMemory();
+        }
+        return instance;
+    }
+
+    //Propiedades
     public List<Ejercicio> Ejercicios = new ArrayList<>();
     public List<Usuario> Usuarios = new ArrayList<>();
     public List<Entrenamiento> Entrenamientos = new ArrayList<>();
     public List<Imagen> Imagenes = new ArrayList<>();
     public List<LineaEntrenamiento> LineasEntrenamiento = new ArrayList<>();
 
+    //Constructor
     public DataMemory() {
         InitializeEjercicios();
         InitializeEntrenamientos();
@@ -30,6 +42,7 @@ public class DataMemory {
         InitializeUsuarios();
         InitializeLineasEntrenamientos();
     }
+
 
     private void InitializeEjercicios(){
         Ejercicios.add(new Ejercicio("asd1wefsd", "Sentadillas", 10, 30, 4, new ArrayList<String>(Arrays.asList("1","2"))));
