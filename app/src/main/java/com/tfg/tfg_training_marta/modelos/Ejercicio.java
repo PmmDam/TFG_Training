@@ -9,17 +9,17 @@ public class Ejercicio {
     private String id;
     private String titulo;
     private int series;
-    private int duracion;
+    private int duracionSeg;
     private int repeticiones;
     private List<String> imagenesId = new ArrayList<>();
 
 
     //Contructor
-    public Ejercicio(String id, String titulo, int series, int duracion, int repeticiones, List<String> imagenesId) {
+    public Ejercicio(String id, String titulo, int series, int duracionSeg, int repeticiones, List<String> imagenesId) {
         this.id = id;
         this.titulo = titulo;
         this.series = series;
-        this.duracion = duracion;
+        this.duracionSeg = duracionSeg;
         this.repeticiones = repeticiones;
         this.imagenesId = imagenesId;
 
@@ -27,6 +27,19 @@ public class Ejercicio {
 
     //Constructor por defecto
     public Ejercicio() {}
+
+
+    @Override
+    public String toString() {
+        return "Ejercicio{" +
+                "id='" + id + '\'' +
+                ", titulo='" + titulo + '\'' +
+                ", series=" + series +
+                ", duracionSeg=" + duracionSeg +
+                ", repeticiones=" + repeticiones +
+                ", imagenesId=" + imagenesId +
+                '}';
+    }
 
     //Getters & Setters
     public String getId() {
@@ -53,12 +66,12 @@ public class Ejercicio {
         this.series = series;
     }
 
-    public int getDuracion() {
-        return duracion;
+    public int getDuracionSeg() {
+        return duracionSeg;
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
+    public void setDuracionSeg(int duracionSeg) {
+        this.duracionSeg = duracionSeg;
     }
 
     public int getRepeticiones() {

@@ -1,5 +1,6 @@
 package com.tfg.tfg_training_marta.persistencia.entrenamientos;
 
+import com.tfg.tfg_training_marta.modelos.Ejercicio;
 import com.tfg.tfg_training_marta.modelos.Entrenamiento;
 
 import java.util.List;
@@ -28,5 +29,10 @@ public class DAOFirebaseEntrenamiento extends  IDAOEntrenamiento{
     @Override
     public boolean add(Entrenamiento model) {
         return false;
+    }
+
+    @Override
+    public List<Ejercicio> getAllEjerciciosByEntrenamientoId(String entrenamientoId) {
+        return null;
     }
 }

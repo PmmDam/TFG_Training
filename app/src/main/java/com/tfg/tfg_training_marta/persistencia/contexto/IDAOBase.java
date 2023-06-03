@@ -10,4 +10,5 @@ public interface IDAOBase<T> {
     boolean update(T model);
     boolean delete(T model);
     boolean add(T model);
+
 }

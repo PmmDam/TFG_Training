@@ -1,5 +1,6 @@
 package com.tfg.tfg_training_marta.persistencia.imagenes;
 
+import com.tfg.tfg_training_marta.modelos.Entrenamiento;
 import com.tfg.tfg_training_marta.modelos.Imagen;
 import com.tfg.tfg_training_marta.persistencia.contexto.DataMemory;
 
@@ -15,7 +16,13 @@ public class DAOMemoryImagen extends IDAOImagen{
 
     @Override
     public Imagen getById(String id) {
-        return null;
+        Imagen result = null;
+        for (Imagen imagen : context.Imagenes) {
+            if (imagen.getId().equals(id)) {
+                result = imagen;
+            }
+        }
+        return result;
     }
 
     @Override

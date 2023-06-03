@@ -29,4 +29,9 @@ public class DAOFirebaseUsuario extends IDAOUsuario{
     public boolean add(Usuario model) {
         return false;
     }
+
+    @Override
+    public Usuario login(String email, String password) {
+        return null;
+    }
 }

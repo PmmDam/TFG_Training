@@ -3,6 +3,7 @@ package com.tfg.tfg_training_marta.persistencia.contexto;
 import com.google.firebase.Timestamp;
 import com.tfg.tfg_training_marta.modelos.Ejercicio;
 import com.tfg.tfg_training_marta.modelos.Entrenamiento;
+import com.tfg.tfg_training_marta.modelos.Idioma;
 import com.tfg.tfg_training_marta.modelos.Imagen;
 import com.tfg.tfg_training_marta.modelos.LineaEntrenamiento;
 import com.tfg.tfg_training_marta.modelos.Usuario;
@@ -33,6 +34,7 @@ public class DataMemory {
     public List<Entrenamiento> Entrenamientos = new ArrayList<>();
     public List<Imagen> Imagenes = new ArrayList<>();
     public List<LineaEntrenamiento> LineasEntrenamiento = new ArrayList<>();
+    public List<Idioma> Idiomas = new ArrayList<>();
 
     //Constructor
     public DataMemory() {
@@ -41,16 +43,17 @@ public class DataMemory {
         InitializeImagenes();
         InitializeUsuarios();
         InitializeLineasEntrenamientos();
+        InitializeIdioma();
     }
 
 
     private void InitializeEjercicios(){
-        Ejercicios.add(new Ejercicio("asd1wefsd", "Sentadillas", 10, 30, 4, new ArrayList<String>(Arrays.asList("1","2"))));
-        Ejercicios.add(new Ejercicio("fntghj", "Zancada", 6, 45, 3, new ArrayList<String>(Arrays.asList("3","4"))));
+        Ejercicios.add(new Ejercicio("1", "Sentadillas", 10, 30, 4, new ArrayList<String>(Arrays.asList("1","2"))));
+        Ejercicios.add(new Ejercicio("2", "Zancada", 6, 45, 3, new ArrayList<String>(Arrays.asList("3","4"))));
     }
 
     private void InitializeEntrenamientos(){
-        Entrenamientos.add(new Entrenamiento("asdafgh", "Torso/Pierna", "https://www.youtube.com/", "https://www.pdf.com/", new ArrayList<String>(Arrays.asList("asd1wefsd","fntghj"))));
+        Entrenamientos.add(new Entrenamiento("1", "Torso/Pierna", "https://www.youtube.com/", "https://www.pdf.com/", new ArrayList<String>(Arrays.asList("1","2"))));
     }
 
     private void InitializeImagenes(){
@@ -59,11 +62,16 @@ public class DataMemory {
 
 
     private void InitializeUsuarios(){
-        Usuarios.add(new Usuario("5678yukg", "marta@gmail.com", Genero.MUJER, "prueba01", "Marta","Riaño", "654987321"));
+        Usuarios.add(new Usuario("1", "marta@gmail.com", Genero.MUJER, "prueba01", "Marta","Riaño", "654987321"));
     }
 
     private void InitializeLineasEntrenamientos(){
-        LineasEntrenamiento.add(new LineaEntrenamiento("5678yukg", "asdafgh", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+        LineasEntrenamiento.add(new LineaEntrenamiento("1", "1", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+    }
+    private void InitializeIdioma(){
+        Idiomas.add(new Idioma("1", "es", "Español/(España)"));
+        Idiomas.add(new Idioma("2", "en", "English"));
+        Idiomas.add(new Idioma("3", "de", "Deutsche"));
     }
 
 }

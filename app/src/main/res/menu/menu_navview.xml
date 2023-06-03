@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_dashboard"
+            android:icon="@drawable/baseline_dashboard_24"
+            android:title="@string/dashboard_nav_menu"/>
+        <item
+            android:id="@+id/menu_entrenamientos"
+            android:icon="@drawable/baseline_sports_gymnastics_24"
+            android:title="@string/entrenamientos_nav_menu" />
+        <item
+            android:id="@+id/menu_historial"
+            android:icon="@drawable/baseline_work_history_24"
+            android:title="@string/historial_nav_menu"/>
+        <item
+            android:id="@+id/menu_idioma"
+            android:icon="@drawable/baseline_language_24"
+            android:title="@string/idioma_nav_menu"/>
+        <item
+            android:id="@+id/menu_salir"
+            android:icon="@drawable/baseline_exit_to_app_24"
+            android:title="@string/exit_nav_menu"/>
+    </group>
+</menu>

@@ -41,7 +41,7 @@ public class DAOMemoryEjercicio extends IDAOEjercicio {
                 ejercicio.setSeries(model.getSeries());
                 ejercicio.setRepeticiones(model.getRepeticiones());
                 ejercicio.setImagenesId(model.getImagenesId());
-                ejercicio.setDuracion(model.getDuracion());
+                ejercicio.setDuracionSeg(model.getDuracionSeg());
                 return true;
             }
         }
@@ -55,6 +55,17 @@ public class DAOMemoryEjercicio extends IDAOEjercicio {
 
     @Override
     public boolean add(Ejercicio model) {
+
+        int maxId = 0;
+        for (Ejercicio ejercico: context.Ejercicios) {
+           int id = Integer.parseInt(ejercico.getId());
+           if( maxId >= id){
+               maxId =id;
+           }
+
+        }
+        maxId++;
+        model.setId(String.valueOf(maxId));
         return context.Ejercicios.add(model);
     }
 }

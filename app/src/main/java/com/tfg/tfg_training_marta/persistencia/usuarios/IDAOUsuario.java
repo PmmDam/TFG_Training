@@ -22,4 +22,12 @@ public abstract class IDAOUsuario implements IDAOBase<Usuario> {
         }
         return null;
     }
+
+    /**
+     * Login del usuario
+     * @param email
+     * @param password
+     * @return
+     */
+    public abstract Usuario login(String email,String password);
 }
