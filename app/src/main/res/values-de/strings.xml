@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TFG_Training_Marta</string>
+    <string name="training_app_name">Trainings-App</string>
+    <string name="prompt_login">Anmeldung</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="prompt_signin">Registrierung/Anmelden</string>
+    <string name="prompt_tlfn">Telefonnummer</string>
+    <string name="prompt_last_name">Nachname</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_signin_form">Registrierungsformular</string>
+    <string name="prompt_email">E-Mail</string>
+    <string name="prompt_genre">Geschlecht</string>
+    <string name="dashboard_nav_menu">Dashboard</string>
+    <string name="entrenamientos_nav_menu">Trainings</string>
+    <string name="historial_nav_menu">Verlauf</string>
+    <string name="idioma_nav_menu">Sprache</string>
+    <string name="exit_nav_menu">Beenden</string>
+    <string name="settings">Einstellungen</string>
+    <string name="usuario">Benutzer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+    <string name="navigation_drawer_open">Öffnen des Menüs</string>
+    <string name="navigation_drawer_close">Schließen des Menüs</string>
+</resources>
