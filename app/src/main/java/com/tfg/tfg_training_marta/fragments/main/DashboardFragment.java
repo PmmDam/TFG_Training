@@ -7,8 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.tfg.tfg_training_marta.R;
+import com.tfg.tfg_training_marta.modelos.Usuario;
+import com.tfg.tfg_training_marta.persistencia.usuarios.IDAOUsuario;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,33 +20,21 @@ import com.tfg.tfg_training_marta.R;
  */
 public class DashboardFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Usuario _usuario;
+    private IDAOUsuario daoUsuario = IDAOUsuario.getInstance();
+
+    private TextView _bienvenidaLbl = null;
+    private TextView _nombreEntranamientoHoyLbl = null;
 
     public DashboardFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DashboardFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static DashboardFragment newInstance(String param1, String param2) {
         DashboardFragment fragment = new DashboardFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,9 +42,11 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        Bundle args = getArguments();
+
+        if (args != null) {
+            String userId = args.getString("userId");
+            _usuario = daoUsuario.getById(userId);
         }
     }
 
@@ -61,6 +54,12 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        _bienvenidaLbl = view.findViewById(R.id.bienvenida_dashboard_fragment);
+        _nombreEntranamientoHoyLbl = view.findViewById(R.id.entrenamiento_hoy_dashboard_fragment);
+
+
+        return view;
     }
 }

@@ -1,5 +1,7 @@
 package com.tfg.tfg_training_marta.managers;
 
+import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,10 +21,8 @@ public class DisplayFragmentManager {
     }
 
 
-    public void displayFragment(List<Fragment> fragments ,int position,int contentFrameId) {
 
-        //Obtenemos el fragment de la lista en función de la posición
-        Fragment fragment = fragments.get(position);
+    public void displayFragment(Fragment fragment,int contentFrameId) {
 
         //Para gestionar la transacción entre fragments necesitamos crear una instancia de la clase
         //FragmentTransacion en función del fragmentManager
@@ -37,7 +37,9 @@ public class DisplayFragmentManager {
 
     }
 
-    public void displayFragment(Fragment fragment,int contentFrameId) {
+    public void displayFragment(Fragment fragment, int contentFrameId, Bundle args) {
+
+        fragment.setArguments(args);
 
         //Para gestionar la transacción entre fragments necesitamos crear una instancia de la clase
         //FragmentTransacion en función del fragmentManager

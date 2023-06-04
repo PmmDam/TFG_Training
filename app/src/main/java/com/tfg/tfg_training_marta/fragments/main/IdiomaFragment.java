@@ -47,7 +47,7 @@ public class IdiomaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         _context = getActivity();
-        _listView = (ListView) _view.findViewById(R.id.listView);
+        _listView = (ListView) _view.findViewById(R.id.listView_idioma);
         //ArrayList<ModelIdioma> idiomas = _idaoIdioma.getAll();
 
         List<Idioma> languages = IDAOIdioma.getInstance().getAll();

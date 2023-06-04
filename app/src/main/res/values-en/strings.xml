@@ -5,7 +5,7 @@
     <string name="training_app_name">Training App</string>
     <string name="prompt_login">Login</string>
     <string name="prompt_password">Password</string>
-    <string name="prompt_signin">Sign up/Sign in</string>
+    <string name="prompt_signin">Sign in/Register</string>
     <string name="prompt_tlfn">Phone Number</string>
     <string name="prompt_last_name">Last Name</string>
     <string name="prompt_name">First Name</string>
@@ -23,4 +23,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
+    <string name="sample_text">Sample Text</string>
+    <string name="welcome_message">Hello</string>
+    <string name="today_training">Today\'s Training:</string>
+    <string name="number_example_adapter_listview_linea_entrenamiento">1</string>
 </resources>

@@ -95,6 +95,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+
                 // Mostrar el fragmento de signin al hacer clic en el botón "Registrar"
                 _displayFragmentManager.displayFragment(new SigninFragment(), R.id.content_frame_login_activity);
             }

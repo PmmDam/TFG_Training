@@ -62,4 +62,9 @@ public class DAOMemoryUsuario extends IDAOUsuario{
         }
         return selectedUser;
     }
+
+    @Override
+    public boolean signin(Usuario usuario) {
+        return false;
+    }
 }

@@ -7,10 +7,15 @@ public enum Genero {
     OTROS("Otros"),
     PREFIERO_NO_DECIRLO("Prefiero no decirlo");
 
-    private String name;
+    private String friendlyName;
 
-    private Genero(String name){
-        this.name = name;
+
+    private Genero(String friendlyName){
+        this.friendlyName = friendlyName;
     }
 
+    @Override
+    public String toString() {
+        return friendlyName;
+    }
 }

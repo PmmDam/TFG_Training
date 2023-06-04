@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TFG_Training_Marta</string>
+    <string name="training_app_name">Application d\'entraînement</string>
+    <string name="prompt_login">Connexion</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="prompt_signin">Inscription/Connexion</string>
+    <string name="prompt_tlfn">Numéro de téléphone</string>
+    <string name="prompt_last_name">Nom de famille</string>
+    <string name="prompt_name">Prénom</string>
+    <string name="prompt_signin_form">Formulaire d\'inscription</string>
+    <string name="prompt_email">Adresse e-mail</string>
+    <string name="prompt_genre">Genre</string>
+    <string name="dashboard_nav_menu">Tableau de bord</string>
+    <string name="entrenamientos_nav_menu">Entraînements</string>
+    <string name="historial_nav_menu">Historique</string>
+    <string name="idioma_nav_menu">Langue</string>
+    <string name="exit_nav_menu">Quitter</string>
+    <string name="settings">Paramètres</string>
+    <string name="usuario">Utilisateur</string>
+    <!-- TODO: Supprimer ou modifier ce texte de substitution -->
+    <string name="hello_blank_fragment">Fragment vierge</string>
+    <string name="navigation_drawer_open">ouvrir_le_tiroir</string>
+    <string name="navigation_drawer_close">fermer_le_tiroir</string>
+    <string name="sample_text">Texte d\'exemple</string>
+    <string name="welcome_message">Bonjour</string>
+    <string name="today_training">Entraînement du jour :</string>
+    <string name="number_example_adapter_listview_linea_entrenamiento">1</string>
+</resources>

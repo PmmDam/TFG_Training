@@ -5,7 +5,7 @@ import com.tfg.tfg_training_marta.modelos.Ejercicio;
 import com.tfg.tfg_training_marta.modelos.Entrenamiento;
 import com.tfg.tfg_training_marta.modelos.Idioma;
 import com.tfg.tfg_training_marta.modelos.Imagen;
-import com.tfg.tfg_training_marta.modelos.LineaEntrenamiento;
+import com.tfg.tfg_training_marta.modelos.LineaUsuario;
 import com.tfg.tfg_training_marta.modelos.Usuario;
 import com.tfg.tfg_training_marta.modelos.enumeraciones.Genero;
 import com.tfg.tfg_training_marta.modelos.enumeraciones.TipoEntrenamiento;
@@ -33,7 +33,7 @@ public class DataMemory {
     public List<Usuario> Usuarios = new ArrayList<>();
     public List<Entrenamiento> Entrenamientos = new ArrayList<>();
     public List<Imagen> Imagenes = new ArrayList<>();
-    public List<LineaEntrenamiento> LineasEntrenamiento = new ArrayList<>();
+    public List<LineaUsuario> LineasUsuario = new ArrayList<>();
     public List<Idioma> Idiomas = new ArrayList<>();
 
     //Constructor
@@ -42,7 +42,7 @@ public class DataMemory {
         InitializeEntrenamientos();
         InitializeImagenes();
         InitializeUsuarios();
-        InitializeLineasEntrenamientos();
+        InitializeLineaUsuari0();
         InitializeIdioma();
     }
 
@@ -65,13 +65,15 @@ public class DataMemory {
         Usuarios.add(new Usuario("1", "marta@gmail.com", Genero.MUJER, "prueba01", "Marta","Riaño", "654987321"));
     }
 
-    private void InitializeLineasEntrenamientos(){
-        LineasEntrenamiento.add(new LineaEntrenamiento("1", "1", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+    private void InitializeLineaUsuari0(){
+        LineasUsuario.add(new LineaUsuario("1", "1","Torso/Pierna", 45, Timestamp.now(), true, TipoEntrenamiento.OBLIGATORIO));
+        LineasUsuario.add(new LineaUsuario("2", "1","Tabata", 30, Timestamp.now(), false, TipoEntrenamiento.OPTATIVO));
     }
     private void InitializeIdioma(){
         Idiomas.add(new Idioma("1", "es", "Español/(España)"));
         Idiomas.add(new Idioma("2", "en", "English"));
         Idiomas.add(new Idioma("3", "de", "Deutsche"));
+        Idiomas.add(new Idioma("4", "fr", "Français"));
     }
 
 }

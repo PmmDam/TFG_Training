@@ -1,7 +1,9 @@
 package com.tfg.tfg_training_marta.persistencia.idioma;
 
+import com.tfg.tfg_training_marta.modelos.Idioma;
 import com.tfg.tfg_training_marta.persistencia.contexto.DataMemory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DAOMemoryIdioma extends IDAOIdioma{
@@ -11,27 +13,27 @@ public class DAOMemoryIdioma extends IDAOIdioma{
         this.context =DataMemory.getInstance();
     }
     @Override
-    public Object getById(String id) {
+    public Idioma getById(String id) {
         return null;
     }
 
     @Override
-    public List getAll() {
+    public List<Idioma> getAll() {
         return context.Idiomas;
     }
 
     @Override
-    public boolean update(Object model) {
+    public boolean update(Idioma model) {
         return false;
     }
 
     @Override
-    public boolean delete(Object model) {
+    public boolean delete(Idioma model) {
         return false;
     }
 
     @Override
-    public boolean add(Object model) {
+    public boolean add(Idioma model) {
         return false;
     }
 }

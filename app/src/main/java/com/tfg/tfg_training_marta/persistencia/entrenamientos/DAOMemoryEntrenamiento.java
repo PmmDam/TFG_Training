@@ -31,7 +31,7 @@ public class DAOMemoryEntrenamiento extends IDAOEntrenamiento {
 
     @Override
     public List<Entrenamiento> getAll() {
-        return null;
+        return context.Entrenamientos;
     }
 
     @Override
@@ -41,26 +41,33 @@ public class DAOMemoryEntrenamiento extends IDAOEntrenamiento {
 
     @Override
     public boolean delete(Entrenamiento model) {
-        return false;
+        return context.Entrenamientos.remove(model);
     }
 
     @Override
     public boolean add(Entrenamiento model) {
-        return false;
+        int maxId = 0;
+        for (Entrenamiento entrenamiento: context.Entrenamientos) {
+            int id = Integer.parseInt(entrenamiento.getId());
+            if( maxId >= id){
+                maxId =id;
+            }
+
+        }
+        maxId++;
+        model.setId(String.valueOf(maxId));
+        return context.Entrenamientos.add(model);
     }
 
 
 
     @Override
-    public List<Ejercicio> getAllEjerciciosByEntrenamientoId(String entrenamientoId) {
-        List<Ejercicio> result = new ArrayList<>();
+    public List<Entrenamiento> getEntrenamientosByUsuarioId(String userId) {
+        return null;
+    }
 
-        Entrenamiento entrenamiento = getById(entrenamientoId);
-
-        for (String idEjercicio:entrenamiento.getEjerciciosId()) {
-            result.add(idaoEjercicio.getById(idEjercicio));
-        }
-
-        return result;
+    @Override
+    public List<Entrenamiento> getEntrenamientosDeHoyByUsuarioId(String userId) {
+        return null;
     }
 }

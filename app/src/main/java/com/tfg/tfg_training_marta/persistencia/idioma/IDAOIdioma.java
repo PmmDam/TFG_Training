@@ -1,5 +1,6 @@
 package com.tfg.tfg_training_marta.persistencia.idioma;
 
+import com.tfg.tfg_training_marta.modelos.Idioma;
 import com.tfg.tfg_training_marta.persistencia.contexto.AppConfig;
 import com.tfg.tfg_training_marta.persistencia.contexto.IDAOBase;
 import com.tfg.tfg_training_marta.persistencia.contexto.ModoPersistencia;
@@ -7,7 +8,7 @@ import com.tfg.tfg_training_marta.persistencia.entrenamientos.DAOFirebaseEntrena
 import com.tfg.tfg_training_marta.persistencia.entrenamientos.DAOMemoryEntrenamiento;
 import com.tfg.tfg_training_marta.persistencia.entrenamientos.IDAOEntrenamiento;
 
-public abstract class IDAOIdioma implements IDAOBase {
+public abstract class IDAOIdioma implements IDAOBase<Idioma> {
 
     public static IDAOIdioma getInstance()
     {

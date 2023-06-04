@@ -3,25 +3,36 @@ package com.tfg.tfg_training_marta.modelos;
 import com.google.firebase.Timestamp;
 import com.tfg.tfg_training_marta.modelos.enumeraciones.TipoEntrenamiento;
 
-public class LineaEntrenamiento {
+public class LineaUsuario {
 
+    private String id;
     private String usuarioId;
-    private String entrenamientoId;
+    private String nombreEntrenamiento;
     private int duracionTotalAproxMin;
     private Timestamp fechaInicio;
     private boolean completado;
     private TipoEntrenamiento tipoEntrenamiento = TipoEntrenamiento.OBLIGATORIO;
 
-    public LineaEntrenamiento(String usuarioId, String entrenamientoId, int duracionTotalAproxMin, Timestamp fechaInicio, boolean completado,TipoEntrenamiento tipoEntrenamiento) {
+
+    public LineaUsuario(String id, String usuarioId, String nombreEntrenamiento, int duracionTotalAproxMin, Timestamp fechaInicio, boolean completado, TipoEntrenamiento tipoEntrenamiento) {
+        this.id = id;
         this.usuarioId = usuarioId;
-        this.entrenamientoId = entrenamientoId;
+        this.nombreEntrenamiento = nombreEntrenamiento;
         this.duracionTotalAproxMin = duracionTotalAproxMin;
         this.fechaInicio = fechaInicio;
         this.completado = completado;
         this.tipoEntrenamiento = tipoEntrenamiento;
     }
 
-    public LineaEntrenamiento() {
+    public LineaUsuario() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUsuarioId() {
@@ -30,14 +41,6 @@ public class LineaEntrenamiento {
 
     public void setUsuarioId(String usuarioId) {
         this.usuarioId = usuarioId;
-    }
-
-    public String getEntrenamientoId() {
-        return entrenamientoId;
-    }
-
-    public void setEntrenamientoId(String entrenamientoId) {
-        this.entrenamientoId = entrenamientoId;
     }
 
     public int getDuracionTotalAproxMin() {
@@ -70,5 +73,13 @@ public class LineaEntrenamiento {
 
     public void setTipoEntrenamiento(TipoEntrenamiento tipoEntrenamiento) {
         this.tipoEntrenamiento = tipoEntrenamiento;
+    }
+
+    public String getNombreEntrenamiento() {
+        return nombreEntrenamiento;
+    }
+
+    public void setNombreEntrenamiento(String nombreEntrenamiento) {
+        this.nombreEntrenamiento = nombreEntrenamiento;
     }
 }

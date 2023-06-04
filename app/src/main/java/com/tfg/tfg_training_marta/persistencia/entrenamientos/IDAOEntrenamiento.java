@@ -2,6 +2,7 @@ package com.tfg.tfg_training_marta.persistencia.entrenamientos;
 
 import com.tfg.tfg_training_marta.modelos.Ejercicio;
 import com.tfg.tfg_training_marta.modelos.Entrenamiento;
+import com.tfg.tfg_training_marta.modelos.LineaUsuario;
 import com.tfg.tfg_training_marta.persistencia.contexto.AppConfig;
 import com.tfg.tfg_training_marta.persistencia.contexto.IDAOBase;
 import com.tfg.tfg_training_marta.persistencia.contexto.ModoPersistencia;
@@ -24,12 +25,9 @@ public abstract class IDAOEntrenamiento implements IDAOBase<Entrenamiento> {
         }
         return null;
     }
-    /***
-     * Devuelve una lista de las instancias de los ejercicios que están asignados a un entrenamiento.
-     * Esto hay que hacerlo así ya que el entrenamiento solo guarda los ids de los ejercicios.
-     * @param entrenamientoId
-     * @return
-     */
-    public abstract List <Ejercicio> getAllEjerciciosByEntrenamientoId(String entrenamientoId);
+
+
+    public abstract List<Entrenamiento> getEntrenamientosByUsuarioId(String userId );
+    public abstract List<Entrenamiento> getEntrenamientosDeHoyByUsuarioId(String userId );
 
 }

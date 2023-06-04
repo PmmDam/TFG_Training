@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.google.android.material.navigation.NavigationView;
 import com.tfg.tfg_training_marta.R;
 import com.tfg.tfg_training_marta.fragments.main.DashboardFragment;
-import com.tfg.tfg_training_marta.fragments.main.EntrenamientoMaestroFragment;
+import com.tfg.tfg_training_marta.fragments.main.EntrenamientosUsuarioMaestroFragment;
 import com.tfg.tfg_training_marta.fragments.main.HistoricoMaestroFragment;
 import com.tfg.tfg_training_marta.fragments.main.IdiomaFragment;
 import com.tfg.tfg_training_marta.managers.DisplayFragmentManager;
@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private Usuario _currentUser = null;
     private IDAOUsuario idaoUsuario;
 
+    //Argumentos que se le van a pasar a los fragments
+    private Bundle _bundle;
+
     private DisplayFragmentManager _displayFragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         _fragments.add(new DashboardFragment());
 
-        _fragments.add(new EntrenamientoMaestroFragment());
+        _fragments.add(new EntrenamientosUsuarioMaestroFragment());
         _fragments.add(new HistoricoMaestroFragment());
         _fragments.add(new IdiomaFragment());
 
@@ -76,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Recuperamos el usuario logueado
         _currentUser = idaoUsuario.getById(userId);
+
+        _bundle = new Bundle();
+        _bundle.putString("userId",userId);
 
         //Obtenemos los layouts por su id
         _navView = (NavigationView) findViewById(R.id.nav_view);
@@ -108,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.menu_dashboard:
 
                     getSupportActionBar().setTitle("Dashboard");
-                    _displayFragmentManager.displayFragment(_fragments.get(0),R.id.content_frame_main_activity);
+                    _displayFragmentManager.displayFragment(_fragments.get(0),R.id.content_frame_main_activity,_bundle);
                     break;
                 case R.id.menu_entrenamientos:
-                    _displayFragmentManager.displayFragment(_fragments.get(1),R.id.content_frame_main_activity);
+                    _displayFragmentManager.displayFragment(_fragments.get(1),R.id.content_frame_main_activity,_bundle);
                     getSupportActionBar().setTitle("Entrenamientos");
                     break;
                 case R.id.menu_historial:
-                    _displayFragmentManager.displayFragment(_fragments.get(2),R.id.content_frame_main_activity);
+                    _displayFragmentManager.displayFragment(_fragments.get(2),R.id.content_frame_main_activity,_bundle);
                     getSupportActionBar().setTitle("Historial");
                     break;
                 case R.id.menu_idioma:

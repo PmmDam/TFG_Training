@@ -2,12 +2,12 @@
 <resources>
     <string name="app_name">TFG_Training_Marta</string>
     <string name="training_app_name">Trainings-App</string>
-    <string name="prompt_login">Anmeldung</string>
+    <string name="prompt_login">Anmelden</string>
     <string name="prompt_password">Passwort</string>
-    <string name="prompt_signin">Registrierung/Anmelden</string>
+    <string name="prompt_signin">Registrieren/Anmelden</string>
     <string name="prompt_tlfn">Telefonnummer</string>
     <string name="prompt_last_name">Nachname</string>
-    <string name="prompt_name">Name</string>
+    <string name="prompt_name">Vorname</string>
     <string name="prompt_signin_form">Registrierungsformular</string>
     <string name="prompt_email">E-Mail</string>
     <string name="prompt_genre">Geschlecht</string>
@@ -18,8 +18,12 @@
     <string name="exit_nav_menu">Beenden</string>
     <string name="settings">Einstellungen</string>
     <string name="usuario">Benutzer</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Platzhaltertext entfernen oder ändern -->
     <string name="hello_blank_fragment">Hallo leeres Fragment</string>
-    <string name="navigation_drawer_open">Öffnen des Menüs</string>
-    <string name="navigation_drawer_close">Schließen des Menüs</string>
+    <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
+    <string name="navigation_drawer_close">Navigationsmenü schließen</string>
+    <string name="sample_text">Beispieltext</string>
+    <string name="welcome_message">Hallo</string>
+    <string name="today_training">Training für heute:</string>
+    <string name="number_example_adapter_listview_linea_entrenamiento">1</string>
 </resources>

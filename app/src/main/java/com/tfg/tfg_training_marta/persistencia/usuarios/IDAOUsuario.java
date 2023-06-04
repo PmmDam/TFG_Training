@@ -30,4 +30,5 @@ public abstract class IDAOUsuario implements IDAOBase<Usuario> {
      * @return
      */
     public abstract Usuario login(String email,String password);
+    public abstract boolean signin(Usuario usuario);
 }
