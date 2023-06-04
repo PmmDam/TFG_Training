@@ -21,6 +21,8 @@ import com.tfg.tfg_training_marta.fragments.main.HistoricoMaestroFragment;
 import com.tfg.tfg_training_marta.fragments.main.IdiomaFragment;
 import com.tfg.tfg_training_marta.managers.DisplayFragmentManager;
 import com.tfg.tfg_training_marta.modelos.Usuario;
+import com.tfg.tfg_training_marta.persistencia.contexto.AppConfig;
+import com.tfg.tfg_training_marta.persistencia.contexto.DataMemory;
 import com.tfg.tfg_training_marta.persistencia.usuarios.IDAOUsuario;
 
 import java.util.ArrayList;
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         _displayFragmentManager.displayFragment(_fragments.get(0),R.id.content_frame_main_activity);
 
         idaoUsuario = IDAOUsuario.getInstance();
+
 
         //Obtenemos el usuario que se ha pasado como argumento(Bundle) desde el LoginActivity
         String userId =  (String) getIntent().getSerializableExtra("userId");

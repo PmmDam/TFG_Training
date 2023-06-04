@@ -1,5 +1,6 @@
 package com.tfg.tfg_training_marta.persistencia.usuarios;
 
+import com.google.android.gms.tasks.Task;
 import com.tfg.tfg_training_marta.modelos.Imagen;
 import com.tfg.tfg_training_marta.modelos.Usuario;
 import com.tfg.tfg_training_marta.persistencia.contexto.DataMemory;
@@ -43,28 +44,17 @@ public class DAOMemoryUsuario extends IDAOUsuario{
         return false;
     }
 
+    @Override
+    public Task<Usuario> getUserByEmail(String email) {
+        return null;
+    }
+
+
     /**
      * Devolverá nulo en caso de que el usuario no es haya encontrado
      * @param email
      * @param password
      * @return
      */
-    @Override
-    public Usuario login(String email, String password) {
-        Usuario selectedUser = null;
 
-        for (Usuario user : context.Usuarios) {
-            if(user.getEmail().equals(email) || user.getEmail().equals(email)){
-                if(user.getPass().equals(password)){
-                    selectedUser = user;
-                }
-            }
-        }
-        return selectedUser;
-    }
-
-    @Override
-    public boolean signin(Usuario usuario) {
-        return false;
-    }
 }

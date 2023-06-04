@@ -1,14 +1,12 @@
 package com.tfg.tfg_training_marta.persistencia.usuarios;
 
+import com.google.android.gms.tasks.Task;
 import com.tfg.tfg_training_marta.modelos.Usuario;
 import com.tfg.tfg_training_marta.persistencia.contexto.AppConfig;
 import com.tfg.tfg_training_marta.persistencia.contexto.IDAOBase;
 import com.tfg.tfg_training_marta.persistencia.contexto.ModoPersistencia;
-import com.tfg.tfg_training_marta.persistencia.imagenes.DAOFirebaseImagen;
-import com.tfg.tfg_training_marta.persistencia.imagenes.DAOMemoryImagen;
-import com.tfg.tfg_training_marta.persistencia.imagenes.IDAOImagen;
 
-public abstract class IDAOUsuario implements IDAOBase<Usuario> {
+public abstract class IDAOUsuario implements IDAOBase<Usuario>{
 
     public static IDAOUsuario getInstance()
     {
@@ -22,13 +20,6 @@ public abstract class IDAOUsuario implements IDAOBase<Usuario> {
         }
         return null;
     }
-
-    /**
-     * Login del usuario
-     * @param email
-     * @param password
-     * @return
-     */
-    public abstract Usuario login(String email,String password);
-    public abstract boolean signin(Usuario usuario);
+    public abstract Task<Usuario> getUserByEmail(String email);
 }
+

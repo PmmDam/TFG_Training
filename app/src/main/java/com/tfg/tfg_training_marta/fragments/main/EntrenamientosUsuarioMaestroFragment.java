@@ -19,6 +19,8 @@ import com.tfg.tfg_training_marta.modelos.LineaUsuario;
 import com.tfg.tfg_training_marta.modelos.Usuario;
 import com.tfg.tfg_training_marta.persistencia.idioma.IDAOIdioma;
 import com.tfg.tfg_training_marta.persistencia.lineaEntrenamiento.IDAOLineaUsuario;
+import com.tfg.tfg_training_marta.persistencia.usuarios.DAOFirebaseUsuario;
+import com.tfg.tfg_training_marta.persistencia.usuarios.DAOMemoryUsuario;
 import com.tfg.tfg_training_marta.persistencia.usuarios.IDAOUsuario;
 
 import java.util.List;
@@ -37,8 +39,6 @@ public class EntrenamientosUsuarioMaestroFragment extends Fragment {
 
     public EntrenamientosUsuarioMaestroFragment() {
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

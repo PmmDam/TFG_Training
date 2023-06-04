@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DAOFirebaseEntrenamiento extends  IDAOEntrenamiento{
+
+
+    public DAOFirebaseEntrenamiento() {
+    }
+
     @Override
     public Entrenamiento getById(String id) {
         return null;
@@ -32,18 +37,6 @@ public class DAOFirebaseEntrenamiento extends  IDAOEntrenamiento{
         return false;
     }
 
-/*    @Override
-    public List<Ejercicio> getAllEjerciciosByEntrenamientoId(String entrenamientoId) {
-        List<Ejercicio> result = new ArrayList<>();
-
-        Entrenamiento entrenamiento = getById(entrenamientoId);
-
-        for (String idEjercicio:entrenamiento.getEjerciciosId()) {
-            result.add(idaoEjercicio.getById(idEjercicio));
-        }
-
-        return result;
-    }*/
     @Override
     public List<Entrenamiento> getEntrenamientosByUsuarioId(String userId) {
         return null;
