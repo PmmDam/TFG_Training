@@ -100,40 +100,18 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-                            Task<Usuario> taskUsuario = daoUsuario.getUserByEmail(email);
-                            Usuario usuario = null;
+                            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+                            //Creamos una intención para navegar al MainActivity pasandole el contexto actual de la aplicación
+                            Intent mainIntent = new Intent(_context, MainActivity.class);
 
-                            taskUsuario.addOnCompleteListener(new OnCompleteListener<Usuario>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Usuario> task) {
-                                    if (task.isSuccessful()) {
-                                        Usuario usuario = task.getResult();
+                            //Añadimos el usuario al intent para poder acceder a el desde la otra actividad
+                            mainIntent.putExtra("userId", userId);
 
-                                        // Use the usuario object as needed
-                                        System.out.println(usuario.toString());
-                                        //Creamos una intención para navegar al MainActivity pasandole el contexto actual de la aplicación
-                                        Intent mainIntent = new Intent(_context, MainActivity.class);
+                            //Iniciamos la navegación
+                            startActivity(mainIntent);
 
-                                        //Añadimos el usuario al intent para poder acceder a el desde la otra actividad
-                                        mainIntent.putExtra("userId", usuario.getId());
-
-                                        //Iniciamos la navegación
-                                        startActivity(mainIntent);
-
-                                        System.out.println(usuario.getNombre());
-                                        Toast.makeText(_context, "Deberia haber navegado al main", Toast.LENGTH_SHORT).show();
-
-                                    } else {
-                                        // Handle task failure
-                                        Exception exception = task.getException();
-                                        // Handle the exception appropriately
-                                    }
-                                }
-                            });
-
-
+                            Toast.makeText(_context, "Deberia haber navegado al main", Toast.LENGTH_SHORT).show();
 
                         } else {
                             Toast.makeText(_context, "El login es incorrecto", Toast.LENGTH_SHORT).show();
